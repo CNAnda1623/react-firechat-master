@@ -49,8 +49,8 @@ function App() {
   const [darkMode, setDarkMode] = useDarkMode();
 
   const brandLogo = darkMode
-    ? `${process.env.PUBLIC_URL}/logo_white.svg`
-    : `${process.env.PUBLIC_URL}/logo.svg`;
+    ? `${process.env.PUBLIC_URL}/logo192.png`
+    : `${process.env.PUBLIC_URL}/logo512.png`;
 
   const ThemeIcon = darkMode ? SunIcon : MoonIcon;
 
@@ -150,8 +150,12 @@ function App() {
         className="flex-shrink-0 flex items-center justify-between px-4 sm:px-8 shadow-md"
         style={{ height: 'var(--topbar-height)' }}
       >
-        <a href="https://alterclass.io/courses/react">
-          <img src={brandLogo} alt="AlterClass" width={150} />
+        <a
+          href="https://alterclass.io/courses/react"
+          className="flex items-center gap-2"
+        >
+          <img src={brandLogo} alt="FireChat" width={50} />
+          <span className="text-xl font-semibold">FireChat</span>
         </a>
         <div className="flex items-center">
           {user ? (
